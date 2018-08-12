@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Movie Booking App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset>
+    <ion-item *ngFor="let movie of movies">
+      <h2>{{movie.title}}</h2>
+      <p><b>€ {{movie.price}}</b></p>
+      <p>{{movie.description}}</p>
+      <button ion-button (click)="presentAlert()">
+          Buy Ticket
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
